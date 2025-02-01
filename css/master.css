@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #0e0e55;
+}
+header .app-title {
+  font-size: 45px;
+  color: #0e0e55;
+  background-color: #ccdad1;
+  width: fit-content;
+  margin: auto;
+  padding: 3px 10px;
+  border-radius: 5px;
+  box-shadow: 6px 5px 3px #000;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ccdad1;
+  height: 100vh;
+}
+.content .left {
+  flex-basis: 35%;
+  padding: 10px 20px;
+}
+.content .left .card {
+  border: 1px solid #000;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+.content .left .card h2 {
+  color: #ccdad1;
+  background-color: #0e0e55;
+  padding: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.content .left .card #user-form {
+  padding: 5px;
+}
+.content .left .card #user-form label {
+  display: block;
+  font-size: 15px;
+  color: #535151;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.content .left .card #user-form input[type="text"] {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 5px;
+}
+.content .left .card button {
+  background-color: #000;
+  color: #ccdad1;
+  box-shadow: 2px 2px 2px #0e0e55;
+  padding: 5px;
+  width: 95%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px auto;
+  font-size: 17px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: block;
+}
+.content .left .card button:hover {
+  background-color: #0e0e55;
+}
+.content .right {
+  flex: 1;
+  padding: 10px;
+}
+.content .right .search-term {
+  font-size: 15px;
+  color: #535151;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.not-found{
+    color: #ccdad1;
+  padding: 10px;
+  background-color: #0e0e55;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.content .right #repos .repo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #ccdad1;
+  padding: 10px;
+  background-color: #0e0e55;
+  border-radius: 5px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+.content .right #repos .repo-item span:first-child {
+    width: 300px;
+}
+.content .right #repos .repo-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+.content .right #repos .repo-item:hover {
+  background-color: #000;
+}
+.content .right #repos .repo-item span i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+  background-color: black;
+  transition: 0.3s;
+  color: white;
+}
+.content .right #repos .repo-item:hover span i {
+  background-color: #0e0e55;
+}
+@media (max-width: 850px) {
+  .content {
+    flex-direction: column;
+  }
+  .content .left {
+    flex-basis: 100%;
+  }
+  .content .right {
+    flex-basis: 100%;
+    margin-top: 20px;
+  }
+  .content .right #repos .repo-item {
+    padding: 10px 0;
+  }
+  .content .right #repos .repo-item span:last-child {
+    width: 100px;
+  }
+
+}
